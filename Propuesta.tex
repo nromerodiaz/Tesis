@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[spanish]{babel}
+%\usepackage[english]{babel}
+\usepackage[latin5]{inputenc}
+\usepackage{hyperref}
+\usepackage[left=3cm,top=3cm,right=3cm,nohead,nofoot]{geometry}
+\usepackage{braket}
+\usepackage{datenumber}
+%\newdate{date}{10}{05}{2013}
+%\date{\displaydate{date}}
+
+\begin{document}
+
+\begin{center}
+\Huge
+Evidencia observacional de estoc\'asticidad en formaci\'on estelar
+
+\vspace{3mm}
+\Large Nicol\'as Romero D\'iaz
+
+\large
+C\'odigo 201127499
+
+
+\vspace{2mm}
+\Large
+Director: Jamie E. Forero-Romero
+
+\normalsize
+\vspace{2mm}
+
+\today
+\end{center}
+
+
+\normalsize
+\section{Introducci\'on}
+
+%Introducci\'on a la propuesta de Monograf\'ia. Debe incluir un breve resumen del estado del arte del problema a tratar. Tambi\'en deben aparecer citadas todas las referencias de la bibliograf\'ia (a menos de que se citen m\'as adelante, en los objetivos o metodolog\'ia, por ejemplo)
+
+Los procesos de formaci\'on estelar son el mecanismo por el cual las galaxias convierten grandes nubes de gas en estrellas. El presente estudio se facilita debido a la estructura relativamente simple de estas nubes de gas [3]. Dicho mecanismo es el primer paso en el desarrollo de las estrellas, por lo cual entender estos procesos  y estudisar sus propiedades f\'isicas y qu\'imicas puede ser de gran utilidad, \\
+%Debido a la estructura relativamente simple de las nubes de gas que dan origen a la formaci\'on estelar es conveniente analizar estas acumulaciones para estudiar sus distintas propiedades f\'isicas y qu\'imicas [3]. \\
+
+A partir del trabajo de Forero-Romero y Dijkstra [1], podemos argumentar que debido a la alta complejidad de estos procesos debemos utilizar m\'etodos computacionales que permitan un an\'alisis completo de los datos. De esta manera, podemos cuantificar las contribuciones de distintos aspectos que afectan los procesos de formaci\'on estelar. Espec\'ificamente, investigaremos en qu\'e medida contribuyen procesos estoc\'asticos en la formaci\'on de estrellas que ocurre en galaxias pr\'oximas a nuestra propia galaxia. \\
+
+%En la referencia [1] se hacen las siguientes afirmaciones:
+%\begin{itemize}
+%\item ``We find that stochasticity alone induces a broad distribution in $L_{\alpha}$ and equivalent width (EW) at a fixed star formation rate (SFR), and that the widths of these distributions decrease with increasing SFR"
+
+%\item ``We find that it is possible to have EW as low as $\sim\frac{EW_0}{4}$ and as high as $\sim3$xEW$_0$ where EW$_0$ denotes the expected EW in the absence of stochasticity
+%\end{itemize}\\
+
+
+El poder entender los efectos ocasionados por la naturaleza estoc\'astica de estos mecanismos puede ser de relevancia ya que generalmente no son tenidos en cuenta al realizar modelos de formaci\'on estelar [1]. 
+
+Para poder calcular el peso de estos procesos estoc\'asticos, nos basamos en los datos publicados en los dos \textit{data release} del Calar Alto Legacy Integral Field Area Survey, o ``CALIFA"[2, 4] los cuales son datos p\'ublicos que encajan con el criterio de ser galaxias pr\'oximas de tipo \textit{face-on}. Es importante que las galaxias estudiadas est\'en orientadas en un plano perpendicular a nuestro campo de visi\'on, de esta manera podemos estudiar la din\'amica de estas galaxias en gran parte de ellas.\\
+
+
+\section{Objetivo General}
+
+%Objetivo general del trabajo. Empieza con un verbo en infinitivo.
+Cuantificar los efectos de la estocasticidad en procesos de formaci\'on estelar
+
+
+
+
+\section{Objetivos Espec\'ificos}
+
+%Objetivos espec\'ificos del trabajo. Empiezan con un verbo en infinitivo.
+
+\begin{itemize}
+	\item Entender el efecto que los procesos estoc\'asticos tienen en formaci\'on estelar
+	\item Analizar los datos prove\'idos por CALIFA de espectros de galaxias pr\'oximas
+	\item Escribir un c\'odigo que permita detectar l\'ineas de emisi\'on en espectros observacionales
+	\item Buscar evidencias de estocasticidad en las propiedades
+          de las l\'ineas de emisi\'on detectadas en observaciones.
+	
+\end{itemize}
+
+\section{Metodolog\'ia}
+
+%Exponer DETALLADAMENTE la metodolog\'ia que se usar\'a en la Monograf\'ia. 
+
+%Monograf\'ia te\'orica o computacional: ¿C\'omo se har\'an los c\'alculos te\'oricos? ¿C\'omo se har\'an las simulaciones? ¿Qu\'e requerimientos computacionales se necesitan? ¿Qu\'e espacios f\'isicos o virtuales se van a utilizar?
+
+Durante el desarrollo de la monograf\'ia, se propone como metodolog\'ia el trabajo individual, complementado por una reuni\'on semanal del grupo de astronom\'ia de la universidad de Los Andes y una reuni\'on semanal aparte con el director. Durante estas reuniones se presentar\'an avances del proyecto y se indicar\'an las correcciones pertinentes que se deban ir haciendo en el transcurso del desarrollo de la monograf\'ia.
+
+Los c\'odigos de este proyecto se desarrollar\'an en Python.
+Se utilizar\'a el espacio designado para la sala de computaci\'on
+cient\'ifica ubicada en el sal\'on Q406. 
+
+%Monograf\'ia experimental: Recordar que para ser aprobada, los aparatos e insumos experimentales que se usar\'an en la Monograf\'ia deben estar previamente disponibles en la Universidad, o garantizar su disponibilidad para el tiempo en el que se realizar\'a la misma. ¿Qu\'e montajes experimentales se van a usar y que material se requiere? ¿En qu\'e espacio f\'isico se llevar\'an a cabo los experimentos? Si se usan aparatos externos, ¿qu\'e permisos se necesitan? Si hay que realizar pagos a terceros, ¿c\'omo se financiar\'a esto?
+
+
+
+\section{Cronograma}
+
+\begin{table}[htb]
+	\begin{tabular}{|c|cccccccccccccccc| }
+	\hline
+	Tareas $\backslash$ Semanas & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16  \\
+	\hline
+	1 & X &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+	2 &   & X & X &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+	3 &   &   &   & X & X &   &   &   &   &   &   &   &   &   &   &   \\
+	4 &   &   &   &   &   & X & X &   &   &   &   &   &   &   &   &   \\
+	5 &   &   &   &   &   &   &   & X & X & X &   &   &   &   &   &   \\
+	6 &   &   &   &   &   &   &   &   &   &   & X & X &   &   &   &   \\
+	7 &   &   &   &   &   &   &   &   &   &   &   &   & X & X &   &   \\
+	8 &   &   &   &   &   &   &   &   &   &   & X & X & X & X & X & X \\
+	\hline
+	\end{tabular}
+\end{table}
+\vspace{1mm}
+
+\begin{itemize}
+    \item Tarea 1: Escribir un c\'odigo en python que permita visualizar los datos de CALIFA.
+    \item Tarea 2: Familiarizarse con la librer\'ia ``Pyfits" que permite el manejo de archivos .fits [5].
+	\item Tarea 3: Familiarizarse con el programa Penalized Pixel-Fitting, o ``ppxf" descrito en [6]. 
+	\item Tarea 4: Identificar regiones de formaci\'on estelar en los datos.
+    \item Tarea 5: Escribir un c\'odigo que implemente el m\'etodo de ppxf a los datos pertinentes al proyecto.
+	\item Tarea 6: Analizar los resultados contrastando el fit realizado con los datos correspondientes.
+	\item Tarea 7: Dar una interpretaci\'on de estos resultados.
+	
+	\item Tarea 8: Redactar el documento final.
+\end{itemize}
+
+\section{Personas Conocedoras del Tema}
+
+%Nombres de por lo menos 3 profesores que conozcan del tema. Uno de ellos debe ser profesor de planta de la Universidad de los Andes.
+
+\begin{itemize}
+	\item Benjamin Oostra (Universidad de los Andes, Departamento de F\'isica)
+	\item Juan Carlos Mu\~noz Cuartas (UdeA, Colombia)
+	\item Mark Dijkstra (Universidad de Oslo, Noruega)
+\end{itemize}
+
+
+\begin{thebibliography}{10}
+
+\bibitem{Jaime} J. E. Forero-Romero, M. Dijkstra. Effects of Star Formation Stochasticity on the $Ly_{\alpha}$ \&
+Lyman Continuum Emission from Dwarf Galaxies during
+Reionization. Monthly Notices of the Royal Astronomical Society, Volume 428, Issue 3, p.2163-2170
+
+\bibitem{Califa 1} S\'anchez, S. F.; Kennicutt, et.al. CALIFA, the Calar Alto Legacy Integral Field Area survey. I. Survey presentation. Astronomy \& Astrophysics, Volume 538, id.A8, 31 pp.
+
+%\bibitem{Califa 1} S\'anchez, S. F.; Kennicutt, R. C.; Gil de Paz, A.; van de Ven, G.; V\'ilchez, J. M.; Wisotzki, L.; Walcher, C. J.; Mast, D.; Aguerri, J. A. L.; Albiol-P\'erez, S.; Alonso-Herrero, A.; Alves, J.; Bakos, J.; Bart\'akov\'a, T.; Bland-Hawthorn, J.; Boselli, A.; Bomans, D. J.; Castillo-Morales, A.; Cortijo-Ferrero, C.; de Lorenzo-C\'aceres, A.; Del Olmo, A.; Dettmar, R.-J.; D\'iaz, A.; Ellis, S.; Falc\'on-Barroso, J.; Flores, H.; Gallazzi, A.; Garc\'ia-Lorenzo, B.; Gonz\'alez Delgado, R.; Gruel, N.; Haines, T.; Hao, C.; Husemann, B.; Igl\'esias-P\'aramo, J.; Jahnke, K.; Johnson, B.; Jungwiert, B.; Kalinova, V.; Kehrig, C.; Kupko, D.; L\'opez-S\'anchez, \'a. R.; Lyubenova, M.; Marino, R. A.; M\'armol-Queralt\'o, E.; M\'arquez, I.; Masegosa, J.; Meidt, S.; Mendez-Abreu, J.; Monreal-Ibero, A.; Montijo, C.; Mourão, A. M.; Palacios-Navarro, G.; Papaderos, P.; Pasquali, A.; Peletier, R.; P\'erez, E.; P\'erez, I.; Quirrenbach, A.; Rela\~no, M.; Rosales-Ortega, F. F.; Roth, M. M.; Ruiz-Lara, T.; S\'anchez-Bl\'azquez, P.; Sengupta, C.; Singh, R.; Stanishev, V.; Trager, S. C.; Vazdekis, A.; Viironen, K.; Wild, V.; Zibetti, S.; Ziegler, B. CALIFA, the Calar Alto Legacy Integral Field Area survey. I. Survey presentation. Astronomy & Astrophysics, Volume 538, id.A8, 31 pp.
+
+\bibitem{Vilchez} J.M. Vilchez. The chemical composition of ionized gas in galaxies. Highlights of Spanish Astrophysics VI, Proceedings of the IX Scientific Meeting of the Spanish Astronomical Society held on September 13 -- 17, 2010, in Madrid, Spain. M. R. Zapatero Osorio et al. (eds.)
+
+\bibitem{Sanchez} S\'anchez Almeida, J.; Terlevich, R.; Terlevich, E.; Cid Fernandes, R.; Morales-Luis, A. B. Qualitative Interpretation of Galaxy Spectra. The Astrophysical Journal, Volume 756, Issue 2, article id. 163, 15 pp. (2012).
+
+\bibitem{pyfits} Space Telescope Science Institute. \url{http://www.stsci.edu/institute/software_hardware/pyfits}
+
+\bibitem{ppxf} Cappellari, Michele; Emsellem, Eric. Parametric Recovery of Line-of-Sight Velocity Distributions from Absorption-Line Spectra of Galaxies via Penalized Likelihood. The Publications of the Astronomical Society of the Pacific, Volume 116, Issue 816, pp. 138-147.
+
+\end{thebibliography}
+
+\section*{Firma del Director}
+\vspace{1.5cm}
+
+\section*{Firma del Estudiante	}
+
+
+
+\end{document} 
