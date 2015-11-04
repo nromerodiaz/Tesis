@@ -39,12 +39,40 @@ Director: Jamie E. Forero-Romero
 \normalsize
 \section{Introducci\'on}
 
-%Introducci\'on a la propuesta de Monograf\'ia. Debe incluir un breve resumen del estado del arte del problema a tratar. Tambi\'en deben aparecer citadas todas las referencias de la bibliograf\'ia (a menos de que se citen m\'as adelante, en los objetivos o metodolog\'ia, por ejemplo)
+%Introducci\'on a la propuesta de Monograf\'ia. Debe incluir un breve
+%resumen del estado del arte del problema a tratar. Tambi\'en deben
+%aparecer citadas todas las referencias de la bibliograf\'ia (a menos
+%de que se citen m\'as adelante, en los objetivos o metodolog\'ia, por
+%ejemplo) 
 
-Los procesos de formaci\'on estelar son el mecanismo por el cual las galaxias convierten grandes nubes de gas en estrellas. El presente estudio se facilita debido a la estructura relativamente simple de estas nubes de gas [3]. Dicho mecanismo es el primer paso en el desarrollo de las estrellas, por lo cual entender estos procesos  y estudisar sus propiedades f\'isicas y qu\'imicas puede ser de gran utilidad, \\
-%Debido a la estructura relativamente simple de las nubes de gas que dan origen a la formaci\'on estelar es conveniente analizar estas acumulaciones para estudiar sus distintas propiedades f\'isicas y qu\'imicas [3]. \\
+Los procesos de formaci\'on estelar comprenden los mecanismos por los
+cuales las galaxias convierten grandes nubes de gas en estrellas. 
+La cantidad f\'isica central en estos estudios es la tasa de
+formaci\'on estelar (SFR, por sus siglas en ingl\'es), la cual mide
+la masa de estrellas formadas por unidad de tiempo.
+Uno de los objetivos principales del estudio observacional de estos
+mecanismos es obtener una relaci\'on entre las propiedades observables
+de una galaxia y la tasa de formaci\'on estelar.
+ 
 
-A partir del trabajo de Forero-Romero y Dijkstra [1], podemos argumentar que debido a la alta complejidad de estos procesos debemos utilizar m\'etodos computacionales que permitan un an\'alisis completo de los datos. De esta manera, podemos cuantificar las contribuciones de distintos aspectos que afectan los procesos de formaci\'on estelar. Espec\'ificamente, investigaremos en qu\'e medida contribuyen procesos estoc\'asticos en la formaci\'on de estrellas que ocurre en galaxias pr\'oximas a nuestra propia galaxia. \\
+%Debido a la estructura relativamente simple de las nubes de gas que
+%dan origen a la formaci\'on estelar es conveniente analizar estas
+%acumulaciones para estudiar sus distintas propiedades f\'isicas y
+%qu\'imicas [3]. \\ 
+
+
+Usualmente se ha considerado que la luminosidad total de una galaxia
+en longitudes de onda ultravioleta y en l\'ineas de emisi\'on debe ser
+directamente proporcional a la SFR.
+Forero-Romero y Dijkstra [1] encontraron en estudios te\'oricos que
+bajo condiciones especiales existen procesos estoc\'asticos que hacen
+que esta proporcionalidad se rompa. 
+El objetivo de esta monograf\'is es buscar evidencia observacional de
+estos procesos estoc\'asticos predichos por la teor\'ia.
+La b\'usqueda se 
+basa en el an\'alisis de datos observacionales publicados en los dos
+\textit{data release} del Calar Alto Legacy Integral Field Area
+Survey, o ``CALIFA"[2, 4]. 
 
 %En la referencia [1] se hacen las siguientes afirmaciones:
 %\begin{itemize}
@@ -54,15 +82,14 @@ A partir del trabajo de Forero-Romero y Dijkstra [1], podemos argumentar que deb
 %\end{itemize}\\
 
 
-El poder entender los efectos ocasionados por la naturaleza estoc\'astica de estos mecanismos puede ser de relevancia ya que generalmente no son tenidos en cuenta al realizar modelos de formaci\'on estelar [1]. 
 
-Para poder calcular el peso de estos procesos estoc\'asticos, nos basamos en los datos publicados en los dos \textit{data release} del Calar Alto Legacy Integral Field Area Survey, o ``CALIFA"[2, 4] los cuales son datos p\'ublicos que encajan con el criterio de ser galaxias pr\'oximas de tipo \textit{face-on}. Es importante que las galaxias estudiadas est\'en orientadas en un plano perpendicular a nuestro campo de visi\'on, de esta manera podemos estudiar la din\'amica de estas galaxias en gran parte de ellas.\\
 
 
 \section{Objetivo General}
 
 %Objetivo general del trabajo. Empieza con un verbo en infinitivo.
-Cuantificar los efectos de la estocasticidad en procesos de formaci\'on estelar
+Buscar evidencia observacional de estocasticidad en procesos de
+formaci\'on estelar  
 
 
 
@@ -72,12 +99,14 @@ Cuantificar los efectos de la estocasticidad en procesos de formaci\'on estelar
 %Objetivos espec\'ificos del trabajo. Empiezan con un verbo en infinitivo.
 
 \begin{itemize}
-	\item Entender el efecto que los procesos estoc\'asticos tienen en formaci\'on estelar
-	\item Analizar los datos prove\'idos por CALIFA de espectros de galaxias pr\'oximas
-	\item Escribir un c\'odigo que permita detectar l\'ineas de emisi\'on en espectros observacionales
+	\item Entender el efecto que los procesos estoc\'asticos
+          tienen en formaci\'on estelar 
+	\item Analizar los datos prove\'idos por CALIFA de espectros
+          de galaxias pr\'oximas 
+	\item Escribir un c\'odigo que permita detectar l\'ineas de
+          emisi\'on en espectros observacionales 
 	\item Buscar evidencias de estocasticidad en las propiedades
-          de las l\'ineas de emisi\'on detectadas en observaciones.
-	
+          de las l\'ineas de emisi\'on detectadas en observaciones.	
 \end{itemize}
 
 \section{Metodolog\'ia}
@@ -86,7 +115,13 @@ Cuantificar los efectos de la estocasticidad en procesos de formaci\'on estelar
 
 %Monograf\'ia te\'orica o computacional: ¿C\'omo se har\'an los c\'alculos te\'oricos? ¿C\'omo se har\'an las simulaciones? ¿Qu\'e requerimientos computacionales se necesitan? ¿Qu\'e espacios f\'isicos o virtuales se van a utilizar?
 
-Durante el desarrollo de la monograf\'ia, se propone como metodolog\'ia el trabajo individual, complementado por una reuni\'on semanal del grupo de astronom\'ia de la universidad de Los Andes y una reuni\'on semanal aparte con el director. Durante estas reuniones se presentar\'an avances del proyecto y se indicar\'an las correcciones pertinentes que se deban ir haciendo en el transcurso del desarrollo de la monograf\'ia.
+Durante el desarrollo de la monograf\'ia, se propone como
+metodolog\'ia el trabajo individual, complementado por una reuni\'on
+semanal del grupo de astronom\'ia de la universidad de Los Andes y una
+reuni\'on semanal aparte con el director. Durante estas reuniones se
+presentar\'an avances del proyecto y se indicar\'an las correcciones
+pertinentes que se deban ir haciendo en el transcurso del desarrollo
+de la monograf\'ia. 
 
 Los c\'odigos de este proyecto se desarrollar\'an en Python.
 Se utilizar\'a el espacio designado para la sala de computaci\'on
@@ -121,8 +156,11 @@ cient\'ifica ubicada en el sal\'on Q406.
     \item Tarea 2: Familiarizarse con la librer\'ia ``Pyfits" que permite el manejo de archivos .fits [5].
 	\item Tarea 3: Familiarizarse con el programa Penalized Pixel-Fitting, o ``ppxf" descrito en [6]. 
 	\item Tarea 4: Identificar regiones de formaci\'on estelar en los datos.
-    \item Tarea 5: Escribir un c\'odigo que implemente el m\'etodo de ppxf a los datos pertinentes al proyecto.
-	\item Tarea 6: Analizar los resultados contrastando el fit realizado con los datos correspondientes.
+    \item Tarea 5: Escribir un c\'odigo que implemente el m\'etodo de
+      ppxf a los datos pertinentes al proyecto para medir las l\'ineas
+      de emisi\'on en los espectros.
+	\item Tarea 6: Analizar los resultados contrastando el fit
+          realizado con predicciones te\'oricas.
 	\item Tarea 7: Dar una interpretaci\'on de estos resultados.
 	
 	\item Tarea 8: Redactar el documento final.
