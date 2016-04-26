@@ -16,7 +16,7 @@
 
 \begin{center}
 \Huge
-Evidencia observacional de estoc\'asticidad en formaci\'on estelar
+Evidencia observacional de estocasticidad en formaci\'on estelar
 
 \vspace{3mm}
 \Large Nicol\'as Romero D\'iaz
@@ -27,7 +27,7 @@ C\'odigo 201127499
 
 \vspace{2mm}
 \Large
-Director: Jaime E. Forero-Romero
+Director: Jamie E. Forero-Romero
 
 \normalsize
 \vspace{2mm}
@@ -50,22 +50,39 @@ cuales las galaxias convierten grandes nubes de gas en estrellas.
 La cantidad f\'isica central en estos estudios es la tasa de
 formaci\'on estelar (SFR, por sus siglas en ingl\'es), la cual mide
 la masa de estrellas formadas por unidad de tiempo.
+Uno de los objetivos principales del estudio observacional de estos
+mecanismos es obtener una relaci\'on entre las propiedades observables
+de una galaxia y la tasa de formaci\'on estelar.
+
+
+%Debido a la estructura relativamente simple de las nubes de gas que
+%dan origen a la formaci\'on estelar es conveniente analizar estas
+%acumulaciones para estudiar sus distintas propiedades f\'isicas y
+%qu\'imicas [3]. \\
+
 
 Usualmente se ha considerado que la luminosidad total de una galaxia
 en longitudes de onda ultravioleta y en l\'ineas de emisi\'on debe ser
 directamente proporcional a la SFR.
-
-Sin embargo, Forero-Romero y Dijkstra [1] encontraron en estudios
-te\'oricos que bajo condiciones especiales existen procesos
-estoc\'asticos que hacenque esta proporcionalidad se rompa para dar
-lugar a una relaci\'on estoc\'astica.
-
+Forero-Romero y Dijkstra [1] encontraron en estudios te\'oricos que
+bajo condiciones especiales existen procesos estoc\'asticos que hacen
+que esta proporcionalidad se rompa.
 El objetivo de esta monograf\'ia es buscar evidencia observacional de
 estos procesos estoc\'asticos predichos por la teor\'ia.
-El trabajo se basa
+La b\'usqueda se
 basa en el an\'alisis de datos observacionales publicados en los dos
 \textit{data release} del Calar Alto Legacy Integral Field Area
 Survey, o ``CALIFA"[2, 3].
+
+%En la referencia [1] se hacen las siguientes afirmaciones:
+%\begin{itemize}
+%\item ``We find that stochasticity alone induces a broad distribution in $L_{\alpha}$ and equivalent width (EW) at a fixed star formation rate (SFR), and that the widths of these distributions decrease with increasing SFR"
+
+%\item ``We find that it is possible to have EW as low as $\sim\frac{EW_0}{4}$ and as high as $\sim3$xEW$_0$ where EW$_0$ denotes the expected EW in the absence of stochasticity
+%\end{itemize}\\
+
+
+
 
 
 \section{Objetivo General}
@@ -74,6 +91,9 @@ Survey, o ``CALIFA"[2, 3].
 Buscar evidencia observacional de estocasticidad en procesos de
 formaci\'on estelar
 
+
+
+
 \section{Objetivos Espec\'ificos}
 
 %Objetivos espec\'ificos del trabajo. Empiezan con un verbo en infinitivo.
@@ -81,10 +101,10 @@ formaci\'on estelar
 \begin{itemize}
 	\item Entender el efecto que los procesos estoc\'asticos
           tienen en formaci\'on estelar
-	\item Analizar los datos prove\'idos por la colabooraci\'on astron\'omica CALIFA de espectros
-          de galaxias pr\'oximas.
+	\item Analizar los datos prove\'idos por CALIFA de espectros
+          de galaxias pr\'oximas
 	\item Escribir un c\'odigo que permita detectar l\'ineas de
-          emisi\'on en espectros observacionales.
+          emisi\'on en espectros observacionales
 	\item Buscar evidencias de estocasticidad en las propiedades
           de las l\'ineas de emisi\'on detectadas en observaciones.
 \end{itemize}
@@ -94,32 +114,15 @@ formaci\'on estelar
 %Exponer DETALLADAMENTE la metodolog\'ia que se usar\'a en la Monograf\'ia.
 
 %Monograf\'ia te\'orica o computacional: ТПC\'omo se har\'an los c\'alculos te\'oricos? ТПC\'omo se har\'an las simulaciones? ТПQu\'e requerimientos computacionales se necesitan? ТПQu\'e espacios f\'isicos o virtuales se van a utilizar?
- 
-Para este trabajo, analizaremos datos espectrales disponibles en bases
-de datos p\'ublicas [2][3]. Estos datos los procesaremos con ayuda de
-librer\'ias de software ya existentes. Esto trabajo se puede realizar
-c\'omodamente en un computador port\'atil. Sin embargo, si se
-requiriera m\'as eficiencia, portaremos el c\'odigo al cluster de
-Uniandes.
 
-El primer paso ser\'a la extracci\'on de los archivos de la base de
-datos y  la familiarizaci\'on con los formatos propios de datos
-astron\'omicos. 
+Durante el desarrollo de la monograf\'ia, se propone como
+metodolog\'ia el trabajo individual. Este trabajo ser\'a complementado con una reuni\'on semanal con el director. Durante estas reuniones se presentar\'an avances del proyecto y se indicar\'an las correcciones pertinentes que se deban ir haciendo en el transcurso del desarrollo de la monograf\'ia.
 
-En segundo lugar viene el \'enfasis en una de las galaxias para poder
-desarrollar de las rutinas de procesamiento que debe ser aplicado a
-decenas de otras galaxias.
+Para este trabajo, analizaremos datos espectrales en formato .fits. Estos archivos contienen espectros en longitudes de onda ultravioleta, que cubren un rango de entre 3650 y 4840 nan\'ometros. Los datos son presentados en [2] y son sustentados en [3].
 
-Finalmente, compararemos los resultados del procesamiento de los datos
-con las relaciones predichas en los trabajos te\'oricos ya publicados.
+Al realizar una revisi\'on detallada de los datos observacionales, podremos cuantificar en qu\'e medida los procesos estoc\'asticos considerados en [1] influencian la idea generalmente aceptada de que la luminosidad en UV es directamente proporcional a la SFR.
 
-
-%Al realizar una revisi\'on detallada de los datos observacionales,
-%podremos cuantificar en qu\'e medida los procesos estoc\'asticos
-%considerados en [1] influencian la idea generalmente aceptada de que
-%la luminosidad en UV es directamente proporcional a la SFR. 
-
-%Las lecturas previas para este trabajo ser\'an [4]. Los c\'odigos de este proyecto se desarrollar\'an en Python. Se utilizar\'a el espacio designado para la sala de computaci\'on cient\'ifica ubicada en el sal\'on Q406.
+Las lecturas previas para este trabajo ser\'an [4]. Los c\'odigos de este proyecto se desarrollar\'an en Python. Se utilizar\'a el espacio designado para la sala de computaci\'on cient\'ifica ubicada en el sal\'on Q406.
 
 %Monograf\'ia experimental: Recordar que para ser aprobada, los aparatos e insumos experimentales que se usar\'an en la Monograf\'ia deben estar previamente disponibles en la Universidad, o garantizar su disponibilidad para el tiempo en el que se realizar\'a la misma. ТПQu\'e montajes experimentales se van a usar y que material se requiere? ТПEn qu\'e espacio f\'isico se llevar\'an a cabo los experimentos? Si se usan aparatos externos, ТПqu\'e permisos se necesitan? Si hay que realizar pagos a terceros, ТПc\'omo se financiar\'a esto?
 
@@ -149,14 +152,13 @@ con las relaciones predichas en los trabajos te\'oricos ya publicados.
 \begin{itemize}
     \item Tarea 1: Escribir un c\'odigo en python que permita visualizar los datos de CALIFA.
     \item Tarea 2: Familiarizarse con la librer\'ia ``Pyfits" que
-      permite el manejo de archivos .fits.
-    \item Tarea 3: Familiarizarse con el programa Penalized
-      Pixel-Fitting, o ``ppxf" descrito en [5].
+      permite el manejo de archivos .fits [5].
+    \item Tarea 3: Familiarizarse con la secuencia de an\'alisis \texttt{Pipe3D} descrito en [6].
     \item Tarea 4: Identificar regiones de formaci\'on estelar en
       los datos.
-    \item Tarea 5: Redactar la entrega correspondiente al 30\%.
+    \item Tarea 5: Redactar la entrega correspondiente al treinta porciento
     \item Tarea 6: Escribir un c\'odigo que implemente el m\'etodo de
-      ppxf a los datos pertinentes al proyecto para medir las l\'ineas
+      \texttt{Pipe3D} a los datos pertinentes al proyecto para medir las l\'ineas
       de emisi\'on en los espectros.
     \item Tarea 7: Analizar los resultados contrastando el fit
       realizado con predicciones te\'oricas.
@@ -182,11 +184,33 @@ con las relaciones predichas en los trabajos te\'oricos ya publicados.
 Lyman Continuum Emission from Dwarf Galaxies during
 Reionization. Monthly Notices of the Royal Astronomical Society, Volume 428, Issue 3, p.2163-2170
 
-\bibitem{Califa1} S\'anchez, S. F.; Kennicutt, R. C.; Gil de Paz,
+\bibitem{Califa 1} S\'anchez, S. F.; Kennicutt, R. C.; Gil de Paz,
 A.; van de Ven, G.; V\'ilchez, J. M.; Wisotzki, L.; Walcher, C. J.;
 Mast, D.; Aguerri, J. A. L.; Albiol-P\'erez, et. al. CALIFA, the
   Calar Alto Legacy Integral Field Area survey. I. Survey
   presentation. Astronomy \& Astrophysics, Volume 538, id.A8, 31 pp.
+
+%\bibitem{Califa 1} S\'anchez, S. F.; Kennicutt, R. C.; Gil de Paz,
+%A.; van de Ven, G.; V\'ilchez, J. M.; Wisotzki, L.; Walcher, C. J.;
+%Mast, D.; Aguerri, J. A. L.; Albiol-P\'erez, S.; Alonso-Herrero, A.;
+%Alves, J.; Bakos, J.; Bart\'akov\'a, T.; Bland-Hawthorn, J.; Boselli,
+%A.; Bomans, D. J.; Castillo-Morales, A.; Cortijo-Ferrero, C.; de
+%Lorenzo-C\'aceres, A.; Del Olmo, A.; Dettmar, R.-J.; D\'iaz, A.;
+%Ellis, S.; Falc\'on-Barroso, J.; Flores, H.; Gallazzi, A.;
+%Garc\'ia-Lorenzo, B.; Gonz\'alez Delgado, R.; Gruel, N.; Haines, T.;
+%Hao, C.; Husemann, B.; Igl\'esias-P\'aramo, J.; Jahnke, K.; Johnson,
+%B.; Jungwiert, B.; Kalinova, V.; Kehrig, C.; Kupko, D.;
+%L\'opez-S\'anchez, \'a. R.; Lyubenova, M.; Marino, R. A.;
+%M\'armol-Queralt\'o, E.; M\'arquez, I.; Masegosa, J.; Meidt, S.;
+%Mendez-Abreu, J.; Monreal-Ibero, A.; Montijo, C.; MourУЃo, A. M.;
+%Palacios-Navarro, G.; Papaderos, P.; Pasquali, A.; Peletier, R.;
+%P\'erez, E.; P\'erez, I.; Quirrenbach, A.; Rela\~no, M.;
+%Rosales-Ortega, F. F.; Roth, M. M.; Ruiz-Lara, T.;
+%S\'anchez-Bl\'azquez, P.; Sengupta, C.; Singh, R.; Stanishev, V.;
+%Trager, S. C.; Vazdekis, A.; Viironen, K.; Wild, V.; Zibetti, S.;
+%Ziegler, B. CALIFA, the Calar Alto Legacy Integral Field Area
+%survey. I. Survey presentation. Astronomy & Astrophysics, Volume 538,
+%id.A8, 31 pp.
 
 \bibitem{Sanchez} S\'anchez Almeida, J.; Terlevich, R.; Terlevich, E.;
   Cid Fernandes, R.; Morales-Luis, A. B. Qualitative Interpretation of
@@ -199,11 +223,21 @@ Mast, D.; Aguerri, J. A. L.; Albiol-P\'erez, et. al. CALIFA, the
   held on September 13 -- 17, 2010, in Madrid, Spain. M. R. Zapatero
   Osorio et al. (eds.)
 
-\bibitem{ppxf} Cappellari, Michele; Emsellem, Eric. Parametric
-  Recovery of Line-of-Sight Velocity Distributions from
-  Absorption-Line Spectra of Galaxies via Penalized Likelihood. The
-  Publications of the Astronomical Society of the Pacific, Volume 116,
-  Issue 816, pp. 138-147.
+%\bibitem{pyfits} Space Telescope Science
+%  Institute. \url{http://www.stsci.edu/institute/software_hardware/pyfits}
+
+\bibitem{pyfits} Robitaille, Thomas P., et al.``Astropy: A community Python
+ package for astronomy.'' Astronomy \& Astrophysics 558 (2013): A33.
+
+%\bibitem{ppxf} Cappellari, Michele; Emsellem, Eric. Parametric
+%  Recovery of Line-of-Sight Velocity Distributions from
+%  Absorption-Line Spectra of Galaxies via Penalized Likelihood. The
+%  Publications of the Astronomical Society of the Pacific, Volume 116,
+%  Issue 816, pp. 138-147.
+
+\bibitem{Pipe3D} S\'anchez, S. F., et al. ``Pipe3D, a pipeline to analyse integral
+ field spectroscopy data: II. Analysis sequence and CALIFA dataproducts.'' Revista Mexicana de Astronom\'ia y Astrof\'isica.
+ arXiv preprint arXiv:1602.01830 (2016).
 
 \end{thebibliography}
 
