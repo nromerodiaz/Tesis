@@ -88,8 +88,8 @@ Survey, o ``CALIFA"[2, 3].
 \section{Objetivo General}
 
 %Objetivo general del trabajo. Empieza con un verbo en infinitivo.
-Buscar evidencia observacional de estocasticidad en procesos de
-formaci\'on estelar
+Buscar evidencia observacional de estocasticidad en propiedades de espectros de galaxias usando los datos p\'ublicos tomados y
+procesados por el equipo de CALIFA.
 
 
 
@@ -102,11 +102,12 @@ formaci\'on estelar
 	\item Entender el efecto que los procesos estoc\'asticos
           tienen en formaci\'on estelar
 	\item Analizar los datos prove\'idos por CALIFA de espectros
-          de galaxias pr\'oximas
-	\item Escribir un c\'odigo que permita detectar l\'ineas de
-          emisi\'on en espectros observacionales
-	\item Buscar evidencias de estocasticidad en las propiedades
-          de las l\'ineas de emisi\'on detectadas en observaciones.
+          de galaxias pr\'oximas. Estos incluyen las intensidades de los espectros del continuo y de las l\'ineas de emisi\'on.
+	\item Escribir un c\'odigo que permita identificar si existen variaciones entre las propiedades espectrales en distintas regiones de la
+	galaxia.
+	\item Interpretar los resultados obtenidos y aplicar el c\'odigo desarrollado a distintas galaxias.
+	%\item Buscar evidencias de estocasticidad en las propiedades
+  %        de las l\'ineas de emisi\'on detectadas en observaciones.
 \end{itemize}
 
 \section{Metodolog\'ia}
@@ -115,14 +116,37 @@ formaci\'on estelar
 
 %Monograf\'ia te\'orica o computacional: ТПC\'omo se har\'an los c\'alculos te\'oricos? ТПC\'omo se har\'an las simulaciones? ТПQu\'e requerimientos computacionales se necesitan? ТПQu\'e espacios f\'isicos o virtuales se van a utilizar?
 
-Durante el desarrollo de la monograf\'ia, se propone como
-metodolog\'ia el trabajo individual. Este trabajo ser\'a complementado con una reuni\'on semanal con el director. Durante estas reuniones se presentar\'an avances del proyecto y se indicar\'an las correcciones pertinentes que se deban ir haciendo en el transcurso del desarrollo de la monograf\'ia.
+Esta monograf\'ia es un trabajo computacional, donde estaremos usando datos p\'ublicos de galaxias que sean tipo
+\textit{face on} que nos permitan analizar distintas regiones de esta.
+%
+%Durante el desarrollo de la monograf\'ia, se propone como metodolog\'ia el trabajo individual. Este trabajo ser\'a complementado
+%con una reuni\'on semanal con el director. Durante estas reuniones se presentar\'an avances del proyecto y se indicar\'an
+%las correcciones pertinentes que se deban ir haciendo en el transcurso del desarrollo de la monograf\'ia.
+%
 
-Para este trabajo, analizaremos datos espectrales en formato .fits. Estos archivos contienen espectros en longitudes de onda ultravioleta, que cubren un rango de entre 3650 y 4840 nan\'ometros. Los datos son presentados en [2] y son sustentados en [3].
+Este trabajo puede realizarse en una laptop y usando el espacio designado para la sala de computaci\'on cient\'ifica en el sal\'on
+Q406 al momento de aplicar el c\'odigo a m\'ultiples galaxias. Con los datos p\'ublicos de CALIFA presentados en [2], [3],
+examinaremos la raz\'on entre la intensidad de los espectros de las  l\'ineas de emisi\'on con la intensidad del espectro del
+continuo en la regi\'on ultravioleta.
+%
+%Para este trabajo, analizaremos datos espectrales en formato .fits. Estos archivos contienen espectros en longitudes de onda
+%ultravioleta, que cubren un rango de entre 3650 y 4840 nan\'ometros. Los datos son presentados en [2] y son sustentados en [3].
+%
 
-Al realizar una revisi\'on detallada de los datos observacionales, podremos cuantificar en qu\'e medida los procesos estoc\'asticos considerados en [1] influencian la idea generalmente aceptada de que la luminosidad en UV es directamente proporcional a la SFR.
+Seg\'un [1], al incluir procesos estoc\'asticos en los modelos de formaci\'on estelar, esta raz\'on que generalmente es tomada
+como constante comienza a tener variaciones. Las variaciones en esta raz\'on, o falta de ellas, nos dar\'an una medida del peso de
+ los procesos estoc\'asticos en los procesos de formaci\'on estelar.
+%
+%Al realizar una revisi\'on detallada de los datos observacionales, podremos cuantificar en qu\'e medida los procesos
+%estoc\'asticos considerados en [1] influencian la idea generalmente aceptada de que la luminosidad en UV es directamente
+%proporcional a la SFR.
+%
 
-Las lecturas previas para este trabajo ser\'an [4]. Los c\'odigos de este proyecto se desarrollar\'an en Python. Se utilizar\'a el espacio designado para la sala de computaci\'on cient\'ifica ubicada en el sal\'on Q406.
+Al obtener resultados podremos dar una interpretaci\'on acerca del efecto que estos procesos tienen en los procesos de formaci\'on
+ estelar.
+%
+%Las lecturas previas para este trabajo ser\'an [4]. Los c\'odigos de este proyecto se desarrollar\'an en Python. Se utilizar\'a
+%el espacio designado para la sala de computaci\'on cient\'ifica ubicada en el sal\'on Q406.
 
 %Monograf\'ia experimental: Recordar que para ser aprobada, los aparatos e insumos experimentales que se usar\'an en la Monograf\'ia deben estar previamente disponibles en la Universidad, o garantizar su disponibilidad para el tiempo en el que se realizar\'a la misma. ТПQu\'e montajes experimentales se van a usar y que material se requiere? ТПEn qu\'e espacio f\'isico se llevar\'an a cabo los experimentos? Si se usan aparatos externos, ТПqu\'e permisos se necesitan? Si hay que realizar pagos a terceros, ТПc\'omo se financiar\'a esto?
 
@@ -135,35 +159,28 @@ Las lecturas previas para este trabajo ser\'an [4]. Los c\'odigos de este proyec
 	\hline
 	Tareas $\backslash$ Semanas & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16  \\
 	\hline
-	1 & X &   &   &   &   &   &   &   &   &   &   &   &   &   &   &   \\
-	2 &   & X & X &   &   &   &   &   &   &   &   &   &   &   &   &   \\
-	3 &   &   &   & X & X &   &   &   &   &   &   &   &   &   &   &   \\
-	4 &   &   &   &   &   & X & X &   &   &   &   &   &   &   &   &   \\
-	5 &   &   &   &   &   &   & X & X &   &   &   &   &   &   &   &   \\
-	6 &   &   &   &   &   &   &   & X & X & X &   &   &   &   &   &   \\
-	7 &   &   &   &   &   &   &   &   &   &   & X & X &   &   &   &   \\
-	8 &   &   &   &   &   &   &   &   &   &   &   &   & X & X &   &   \\
-	9 &   &   &   &   &   &   &   &   &   &   & X & X & X & X & X & X \\
+	1 & X & X & X &   &   &   &   &   &   &   &   &   &   &   &   &   \\
+	2 &   &   &   & X & X &   &   &   &   &   &   &   &   &   &   &   \\
+	3 &   &   &   &   &   & X & X &   &   &   &   &   &   &   &   &   \\
+	4 &   &   &   &   &   &   &   & X & X &   &   &   &   &   &   &   \\
+	5 &   &   &   &   &   &   &   &   & X & X & X &   &   &   &   &   \\
+	6 &   &   &   &   &   &   &   &   &   &   &   & X & X &   &   &   \\
+	7 &   &   &   &   &   &   &   &   &   &   &   &   & X & X & X &   \\
+	8 &   &   &   &   &   &   &   &   &   &   & X & X & X & X & X & X \\
 	\hline
 	\end{tabular}
 \end{table}
 \vspace{1mm}
 
 \begin{itemize}
-    \item Tarea 1: Escribir un c\'odigo en python que permita visualizar los datos de CALIFA.
-    \item Tarea 2: Familiarizarse con la librer\'ia ``Pyfits" que
-      permite el manejo de archivos .fits [5].
-    \item Tarea 3: Familiarizarse con la secuencia de an\'alisis \texttt{Pipe3D} descrito en [6].
-    \item Tarea 4: Identificar regiones de formaci\'on estelar en
-      los datos.
+    \item Tarea 1: Estudio de la sintaxis  de la librer\'ia ``Pyfits'' [4] y de la secuencia de an\'alisis \texttt{Pipe3D} [5].
+    \item Tarea 2: Familiarizarse con la estructura de los datos de CALIFA.
+    \item Tarea 3: Escribir un programa en Python que nos permita manipular datos espectrales.
+    \item Tarea 4: Calcular los coeficientes de intensidades de una galaxia para buscar evidencia de estocasticidad.
     \item Tarea 5: Redactar la entrega correspondiente al treinta porciento
-    \item Tarea 6: Escribir un c\'odigo que haga uso del m\'etodo 
-      \texttt{Pipe3D} a los datos pertinentes al proyecto para medir las l\'ineas
-      de emisi\'on en los espectros.
-    \item Tarea 7: Analizar los resultados contrastando el fit
-      realizado con predicciones te\'oricas.
-    \item Tarea 8: Dar una interpretaci\'on de estos resultados.
-    \item Tarea 9: Redactar el documento final.
+    \item Tarea 6: Analizar los resultados contrastando los coeficientes encontrados con predicciones te\'oricas.
+    \item Tarea 7: Dar una interpretaci\'on de estos resultados y aplicar a otras galaxias.
+    \item Tarea 8: Redactar el documento final.
 \end{itemize}
 
 \section{Personas Conocedoras del Tema}
@@ -217,11 +234,11 @@ Mast, D.; Aguerri, J. A. L.; Albiol-P\'erez, et. al. CALIFA, the
   Galaxy Spectra. The Astrophysical Journal, Volume 756, Issue 2,
   article id. 163, 15 pp. (2012).
 
-\bibitem{Vilchez} J.M. Vilchez. The chemical composition of ionized
-  gas in galaxies. Highlights of Spanish Astrophysics VI, Proceedings
-  of the IX Scientific Meeting of the Spanish Astronomical Society
-  held on September 13 -- 17, 2010, in Madrid, Spain. M. R. Zapatero
-  Osorio et al. (eds.)
+%\bibitem{Vilchez} J.M. Vilchez. The chemical composition of ionized
+%  gas in galaxies. Highlights of Spanish Astrophysics VI, Proceedings
+%  of the IX Scientific Meeting of the Spanish Astronomical Society
+%  held on September 13 -- 17, 2010, in Madrid, Spain. M. R. Zapatero
+%  Osorio et al. (eds.)
 
 %\bibitem{pyfits} Space Telescope Science
 %  Institute. \url{http://www.stsci.edu/institute/software_hardware/pyfits}
