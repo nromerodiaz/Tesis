@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  FALTA  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% Termiar de ampliar la seccion 3.2.2 & preguntarle a jaime si dejo interstellar medium
+
+\chapter{Data analysis}
+
+In this chapter, we discuss the details of the computational tools pertinent to this work.
+We will review the different libraries and procedures that have been applied in order to organize and analyze the different CALIFA
+datacubes. Specifically, we will discuss the structure of said datacubes, as well as some generalities of the output of the
+Pipe3D analysis pipeline.
+
+\section{The Pipe3D outputs}
+
+In the case of this study, we are interested in fluctuations of the EW of the OII line emitted by gas clouds that surround star
+forming regions. The OII EW is defined as the ratio between the intensity of the OII emission line and the continuum radiation
+in its vicinity. This means that we need a robust fitting procedure in order to characterize both this emission line spectra
+and continuum radiation since they will greatly affect our data of the EW.
+
+The Pipe3D pipeline proposed by S\'anchez et.al $\left[6\right]$ consist of a series of steps followed in order to
+organize and successfully provide a fit for the spectra in the CALIFA datacubes. Since the original data consists of a superposition
+of spectra of gas clouds in interstellar environments as well as the underlying star population, these two spectra have to be
+treated using several procedures. It is also important to make a distinction between weak and strong emission lines since fitting
+ procedures are different for each. Since we will be studying H$_{\alpha}$, H$_{\beta}$ and OII lines, we will not include the
+ fitting procedure of weak emission lines.
+
+\subsection{Analysis of the stellar population}
+
+We are able to study the spectra of the stellar populaion using an algorithm known as ``CS-binning algorithm", which
+consists of dividing the datacube into two dimensional cells called ``spatial bins" and subsequently taking the mean value of the
+pixels included, masking pixels with bad values. Once we have the averaged spectra, Pipe3D is able to fit the observed data via an
+iterative procedure $[6]$. When applying this procedure, there appears an associated error for these new binned spectra since bad
+pixel data can adversely modify the resultant dataproduct. Pipe3D provides the associated error of each spaxel as part of the
+original datacube. The ultimate goal of this analysis is to be able to obtain an optimum depiction of the stellar population and
+subtract it from the datacubes, leaving the remaining data of the spectra associated exclusively with the emission lines of the gas
+clouds in interstellar regions of the galaxy.
+
+After this binning procedure, several maps are created:
+\begin{itemize}
+  \item Row Stack Spectra (RSS)
+  \item A position table for each galaxies binned cube, corresponding to the indices of the spatial bins from brightest to dimmest.
+  \item Two intensity maps at the wavelength range of the V-band, with one map corresponding to the intensity before the binning
+  procedure and the other one to the binned data.
+\end{itemize}
+Once this results are obtained, the stellar population is fitted with a Simple Stellar Population (SSP) template and thus the
+systemic velocity, the velocity dispersion and dust attenuation can be derived.
+
+The final step consists of fitting the strong emission lines and subtracting them from the datacube obtained at this stage. Then,
+the procedure is repeated until a certain condition of $\chi^2$ is met. The fitting of strong emission lines is presented in the
+following section.
+
+\subsection{Analysis of strong emission lines}
+
+A Gaussian fit, though not sophisticated, is valid for fitting strong emission lines, since we will not be taking into account
+gas-rich major merger galaxies, AGN nuclei nor galaxies that intercept in our observational foreground. Pipe3D divides the observed
+wavelengths into four groups:
+\begin{itemize}
+  \item $[O]_{II}\lambda 3727 \hspace*{2pt} \left(3700-3750\right)$ \AA
+  \item $H_{\beta}, [O_{III}]\lambda 4959$ and $[O_{III}] \lambda5707 \hspace*{2pt} \left(4800-5050\right)$ \AA
+  \item $[N_{II}] \lambda 6548, H_{\alpha}$ and $[N_{II}] \lambda 6583 \hspace*{2pt} \left(6530-6630\right)$ \AA
+  \item $[S_{II}] \lambda 6717, [S_{II}] \lambda 6731 \hspace*{2pt} \left(6680-6770\right)$ \AA
+\end{itemize}
+Before assigning a gaussian function to a particular emission line, a first guess must be done of its kinematic properties based on
+the expected H$_{\alpha}$ wavelength of the radiation, taking into account that particular galaxies redshift and by making a
+parabolic approximation to the centroid of the emission line.
+
+Finally, the emission line is fitted by using a small range of systematic velocities centered around the initial guess. This
+procedure results in a set of maps of an \protect\textit{emission line pure cube} which includes different parameters for each
+emission line [6].
+
+%--- Hago el de las l\'ineas de emisi\'on d\'ebiles? No puedo describirlo superficialmente porque el an\'alisis es muy t\'ecnico

@@ -1,0 +1,182 @@
+\chapter{Results}
+
+For representative results of the analysis applied we will present four galaxies: $(i)$ IC4566; $(ii)$ NGC0001; $(iii)$ NGC0036
+$(iv)$ UGC09476 in figures \ref{4-1} to \ref{4-4}.
+
+We begin by visualizing each galaxy's OII, H$_{\alpha}$ and H$_{\beta}$ intensities. Then, we plot the H$_{\alpha}/$H$_{\beta}$
+ratio that Fumagalli checked for stochasticity in [2]. Taking the logarithm in base ten gives us a clearer view of smaller
+variations in the values of this ratio. Since stochasticity would theoretically alter the values of this quotient, we will present
+the $\log$H$_{\alpha}$ vs. $\log$H$_{\alpha}/$H$_{\beta}$ distribution in more detail in figure \ref{4-5}. By visualizing the
+$\log$H$_{\alpha}$ values plotted against the $\log$H$_{\alpha}/$H$_{\beta}$ we can more easily identify regions of low SFR.
+
+Making a histogram from the data in figure \ref{4-5}, we obtain figure \ref{4-6}. It is important to separate the
+H$_{\alpha}$ data in three regions. A bright region, a mid-range region and a faint region. The bright region is plotted in red, the
+mid-range spectra is green and the faint spectra in blue. The distinction arises from the fact that stochastic effects appear in
+simulations when there is low SFR and therefore have a dimmer spectra. The segmented vertical line indicates the theoretical value
+for the H$_{\alpha}/$H$_{\beta}$ ratio, which is 2.85\footnote{Osterbrock, Astrophysics of Planetary Nebulae and Active Galactic Nuclei,University Science Books, 1989}
+ and whose value is theoretically affected by stochasticity.
+
+After plotting the data in figure \ref{4-6} we perform a fit of this results and obtain a probability density function for values
+of H$_{\alpha}/$H$_{\beta}$ across all regions of the spectra. The resulting values of the free parameters obtained are then
+presented in table 1. These free parameters are the ones present in equation \ref{eq2-1}, which are $P_0$, $\mathcal{M}_0$ , $\alpha$ and $\gamma$.
+In this table there are also included results of more galaxies. The full list of galaxies studied is included in the appendix. The fitted curve is
+presented in figure \ref{4-7} for the four galaxies presented.
+
+We also check the distribution for the OII EW. Once again, we separate our EW data into bright H$_{\alpha}$ and faint H$_{\alpha}$.
+Results for the galaxies are presented in figure \ref{4-8}. The green histogram now indicating the bright region and blue for the
+faint region. \\
+
+%\vfill
+%\newpage
+\centering\textbf{IC4566}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.34]{img/ic4566.png}
+  \caption{a) OII flux, b) H$_{\alpha}$ flux, c) H$_{\beta}$ flux, d) $\log($H$_{\alpha})$ vs. $\log$(H$_{\alpha}/$H$_{\beta}$)}
+  \label{4-1}
+\end{figure}
+
+\newpage
+\textbf{NGC0001}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.34]{img/ngc0001.png}
+  \caption{a) OII flux, b) H$_{\alpha}$ flux, c) H$_{\beta}$ flux, d) $\log($H$_{\alpha})$ vs. $\log$(H$_{\alpha}/$H$_{\beta}$)}
+  \label{4-2}
+\end{figure}
+%\newpage
+\textbf{NGC0036}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.34]{img/ngc0036.png}
+  \caption{a) OII flux, b) H$_{\alpha}$ flux, c) H$_{\beta}$ flux, d) $\log($H$_{\alpha})$ vs. $\log$(H$_{\alpha}/$H$_{\beta}$)}
+  \label{4-3}
+\end{figure}
+
+\textbf{UGC09476}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.34]{img/ugc09476.png}
+  \caption{a) OII flux, b) H$_{\alpha}$ flux, c) H$_{\beta}$ flux, d) $\log($H$_{\alpha})$ vs. $\log$(H$_{\alpha}/$H$_{\beta}$)}
+  \label{4-4}
+\end{figure}
+
+%\justify
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.34]{img/trim-all.png}
+  \caption{Distribution of $\log$H$_{\alpha}/$H$_{\beta}$ values for our representative galaxies}
+  \label{4-5}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.35]{img/hist-all.png}
+  \caption{Distribution of $\log$H$_{\alpha}/$H$_{\beta}$ values for our representative galaxies plotted as
+  histograms. The blue, green and red histograms correspond to the faint, mid range and bright regions of the H$_{\alpha}$ spectra
+  respectively. The segmented line lies on the theoretical value of the ratio.}
+  \label{4-6}
+\end{figure}
+
+\clearpage
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.35]{img/data-fit.png}
+  \caption{Distribution of H$_{\alpha}/$H$_{\beta}$ values, fitted as a double power law of the form shown in equation \ref{eq2-1}.
+   The segmented line indicates the logarithm in base ten of the theoretical value of the H$_{\alpha}/$H$_{\beta}$ ratio.}
+  \label{4-7}
+\end{figure}
+
+\begin{table}
+  \label{tb1}
+  \begin{centering}
+  \scriptsize\textbf{Table 1}  Results of the estimation of the free parameters for the galaxies presented. The first row of each box are the estimations for parameters in the faint region, the second row is for mid range and the last row is for bright regions. \\
+  \end{centering}
+  \centering
+  \begin{tabular}{ c c c c c }
+     & $P_0$ & $\mathcal{M}_0$ & $\alpha$ & $\gamma$ \\ \hline \hline
+    IC4566   & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 9.97257057  & 0.66439036 & -6.90804198  & 15.11022712  \\
+     & 9.31448729  & 0.77507363 & -5.63906206  & 246.58977299 \\ \hline
+    NGC0001  & 5.45274152  & 0.646262   & -3.93214833  & 8.60231608   \\
+     & 17.90378157 & 0.68880842 & -13.79614347 & 24.71101529 \\
+     & 16.38690053 & 0.69380378 & -21.93405233 & 14.44680814 \\ \hline
+    NGC0036  & 3.99989437 & 0.66192434 & -2.48524458 & 6.9536647 \\
+     & 13.02396505 & 0.65278304 & -11.16069931 & 14.25713254 \\
+     & 22.28399342 & 0.60634967 & -34.49879557 & 14.1615634 \\ \hline
+    UGC09476 & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 15.85363576 & 0.5869998  & -9.32051303  & 18.96592234 \\
+     & 19.79426654 & 0.58477093 & -12.99367006 & 25.14352254 \\ \hline
+    NGC0237  & 6.07363614 & 0.53588776 & -3.0693835 & 9.23165432 \\
+     & 9.35964361 & 0.67672432 & -4.6064685 & 30.05004698 \\
+     & 19.82078282 & 0.65515464 & -17.09466414 & 22.49513438 \\ \hline
+    NGC4210  & 6.70203691 & 0.55783254 & -3.768397 & 11.30558088 \\
+     & 16.11252471 & 0.54029705 & -11.34576718 & 14.55231085 \\
+     & 17.79401005 & 0.60358477 & -8.06582396 & 29.69265484 \\ \hline
+    UGC09067 & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 20.2522966 & 0.66382498 & -17.26512941 & 23.71938356 \\
+     & 38.51961161 & 0.65405959 & -34.25595988 & 38.05965643 \\ \hline
+    NGC0776  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 17.86224451 & 0.65272885 & -10.2694177 & 36.92624162 \\
+     & 3.03273802e+01 & 6.29415698e-01 & -1.47235683e+03 & 8.03508911 \\ \hline
+    NGC4185  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 34.5082516 & 0.6160257 & -11.76223282 & 62.5459429 \\
+     & 30.40804093 & 0.55054484 & -23.51395979 & 20.75471106 \\ \hline
+    NGC6941  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 8.74168013 & 0.61839248 & -5.56878649 & 12.97466935 \\
+     & 11.08774536 & 0.61310135 & -7.5913821 & 77.92311115 \\ \hline
+    NGC5947  & 6.07516876 & 0.55725356 & -3.01677251 & 11.99239462 \\
+     & 9.46958792e+01 & 5.96046441e-01 & -1.02651949e+03 & 5.06593218e+01 \\
+     & 7.68500907e+01 & 6.42779504e-01 & -1.67143389e+01 & 2.78970188e+03 \\ \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \label{tb1-1}
+  \begin{centering}
+  \scriptsize\textbf{Table 1 cont.}  Results of the estimation of the free parameters for the galaxies presented. The first row of each box are the estimations for parameters in the faint region, the second row is for mid range and the last row is for bright regions. \\
+  \end{centering}
+  \centering
+  \begin{tabular}{ c c c c c }
+     & $P_0$ & $\mathcal{M}_0$ & $\alpha$ & $\gamma$ \\ \hline \hline
+    NGC5630  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 23.76983133 & 0.61678668 & -10.47539771 & 177.59963355 \\
+     & 6.14432635e+01 & 5.43391105e-01 & -2.53863573e+01 & 7.07883254e+02 \\ \hline
+    NGC7819  & 5.64575733 & 0.54766878 & -3.34628371 & 7.26733786 \\
+     & 45.17486167 & 0.65490677 & -28.02002097 & 478.42703003 \\
+     & 60.70074969 & 0.62928871 & -63.29956548 & 40.69369206 \\ \hline
+    IC0776   & 6.31978756 & 0.45989236 & -2.96673728 & 6.77244842 \\
+     & 11.28915937 & 0.66260033 & -1.71239986 & 172.28450106 \\
+     & 1.79592765 & 1.60730694 & 1.98527051 & 59.03888205 \\ \hline
+    NGC0171  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 15.3519312 & 0.66004673 & -7.11830138 & 107.9808245 \\
+     & 9.91740148 & 0.65004505 & -3.05285332 & 173.32019704 \\ \hline
+    NGC5520  & 5.77666534 & 0.59580223 & -3.03887638 & 13.71760963 \\
+     & 17.47499974 & 0.60290305 & -14.96342177 & 11.45619764 \\
+     & 17.10882 & 0.71787408 & -5.3603214 & 225.82113638 \\ \hline
+    NGC5378  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 6.59069134 & 0.6144234 & -3.82666631 & 9.64549458 \\
+     & 9.5075563 & 0.79044972 & -1.91515454 & 77.19950244 \\ \hline
+    NGC3614  & 5.88905924 & 0.59618067 & -3.4349813 & 10.56069665 \\
+     & 10.41387827 & 0.52476607 & -249.25800168 & 2.39283009 \\
+     & 18.48493963 & 0.72161139 & -2.8612163 & 219.65672529 \\ \hline
+    NGC5406  & 4.81161509 & 0.6245487 & -2.67347417 & 9.5757696 \\
+     & 0.61242192 & 0.74335932 & 15.11232105 & 33.26679814 \\
+     & 16.76435234 & 0.65746016 & -8.24985774 & 87.51968968 \\ \hline
+    NGC2347  & 1.15 & 0.75 & -0.13 & 2.67 \\
+     & 23.68235267 & 0.57598245 & -24.45526185 & 18.52368243 \\
+     & 30.90784931 & 0.5830965 & -35.559818 & 19.7851584 \\ \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.31]{img/oiiew-all.png}
+  \caption{Distribution of the OII EW. The blue and green histograms correspond to the faint and bright regions of the H$_{\alpha}$
+  spectra respectively.}
+  \label{4-8}
+\end{figure}
+
+\justify

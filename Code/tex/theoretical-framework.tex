@@ -1,0 +1,91 @@
+\chapter{Theoretical framework}
+
+\section{Stochasticity in star formation}
+
+In simulations presented in [1], [2] stochastic effects causes the value of different line intensity ratios to fluctuate, with
+regions of low SFR being most affected. We can illustrate star formation stochasticity with an example: a weighted die that is more
+likely to cast a lower number. If the die is thrown many times then we will have a good sampling of the probability distribution.
+On the contrary, if the die is thrown only a few times, the probability distribution will not be sampled accurately.
+
+In this analogy the lower numbers are the less massive stars and the die that is thrown many times is a region of high SFR. When a
+star forming locality has a high SFR, sampling the IMF is straightforward. If a region presents a low SFR, the IMF can be sampled
+using stochastic sampling [3].
+
+In a region where stars are being produced, these stars will ionize gas clouds adjacent to them. Less massive stars ionize gas
+clouds in lesser proportion than their more massive counterparts, making this gas emission spectra dimmer in comparison.
+In order to separate low SFR regions from higher SFR regions we analyze the H$_{\alpha}$ emission line intensity. This line is an
+indicator of SFR since it is produced by gas ionized by young, hot stars [7]. Greater H$_{\alpha}$ intensity corresponds to larger
+SFR and lower intensity to lesser SFR.
+
+In [2], Forero-Romero et. al. found that when stochastic effects are taken into consideration the measured EW varied from
+$\sim \mathrm{EW}_0/4$ to $\sim 3\times \mathrm{EW}_0$, with EW$_0$ the expected value for the EW. The authors describe the
+fitting of this curve as a SFR dependent probability density function (PDF) at a fixed SFR of the form:
+\begin{equation}
+  P\left( \mathcal{M} | \mathrm{SFR} \right) = P_0 \left[ \left( \frac{\mathcal{M}}{\mathcal{M}_0} \right)^{-\alpha} + \left( \frac{\mathcal{M}}{\mathcal{M}_0} \right)^{\gamma} \right]^{-1}
+  \label{eq2-1}
+\end{equation}
+with
+\begin{equation}
+  \mathcal{M} \equiv \frac{\mathrm{EW}}{\mathrm{EW_0}}
+  \label{eq2-2}
+\end{equation}
+
+The star formation rate is present by the constants $P_0,\hspace{1pt}\mathcal{M}_0, \alpha, \gamma$. This double power law
+is valid for values of $P\left(\mathcal{M}|\mathrm{SFR}\right) > 10^{-2}$ due to the limited number of points available to perform
+a thorough fit of the data. This PDF is visualized in figure \ref{fig2-1} for multiple star formation rates. In this figure, it is
+clear that as SFR increases, the peak of the function becomes more pronounced. Ideally, if no external effects are
+present, this plot would consist of a delta function centered around $\mathcal{M}=1$ [1].
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{img/sfr.png}
+  \label{fig2-1}
+  \caption{Visualization of equation \ref{eq2-1} for different SFR. Taken from [1]}
+\end{figure}
+
+In a separate work, Mas-Ribas et. al. [3] also found fluctuation of the $Ly_{\alpha}$ line intensity when performing stochastic
+IMF sampling (figure \ref{fig2-2}).
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.35]{img/mas-ribas.png}
+  \caption{Fluctuation of the $Ly_{\alpha}$ and HeII$\lambda 1640$ luminosity for a stochastically sampled IMF.}
+  \label{fig2-2}
+\end{figure}
+In absence of stochasticity, this theoretical results shown in figure \ref{fig2-2} should be a thin line along the expected
+$Ly_{\alpha}$ luminosity [3]. The column on the left has lower SFR, the middle column has a higher SFR and the column on the right
+has the highest SFR. Therefore, when stochasticity is present in simulations we see a distribution of values of $Ly_{\alpha}$
+luminosity around a mean value, once again with regions of low SFR being the most sensitive to stochasticity. The same effects can
+be seen in the HeII$\lambda 1640$ line. This simulations were performed making a stochastic sampling of the IMF and taking periods
+of star formation bursts of 1000M$_{\astrosun}$ per Myr [3].
+
+As we can see, stochastic effects in simulations cause fluctuation of multiple spectral parameters, including the $Ly_{\alpha}$
+EW and luminosity and the H$_{\alpha}/$H$_{\beta}$ ratio. In this work, we look at the emission spectra of gas clouds and check the
+H$_{\alpha}/$H$_{\beta}$ ratio for fluctuation around a mean value, as found in simulations by [2]. A study of the EW of the OII
+line is also presented.
+
+\section{Measuring stochasticity}
+
+When we measure stochasticity it is important to take galactic extinction into account. Since the predicted effects of stochasticity
+is the fluctuation of spectral parameters, any effects that influence observational data must be studied and quantified. In this
+section, this phenomenon of galactic extinction, known as either the Balmer decrement or interstellar reddening, is detailed.
+
+\subsection{The Balmer decrement}
+
+The Balmer decrement is a phenomenon that occurs when electromagnetic radiation passes through
+a dust cloud in the interstellar medium. These dust particles are micron sized, which causes a greater absorption of bluer light
+as it is more likely to collide with the particle. This means that when we observe this light it will appear redder.
+
+When we analyze the H$_{\alpha}/$H$_{\beta}$ ratio this absorption must be taken into account, since the H$_{\beta}$ emission line
+has a shorter wavelength than H$_{\alpha}$ and will more likely collide with dust particles and affect our measured value of
+H$_{\alpha}/$H$_{\beta}$. This attenuation of H$_{\beta}$ means that when checking for the value of H$_{\alpha}/$H$_{\beta}$ we will
+observe a greater number since H$_{\beta}$ has become dimmer in comparison to H$_{\alpha}$. This absorption can be seen in figure
+\ref{fig2-3} [8].
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{balmer.png}
+  \caption{Difference in H$_{\alpha}$ and H$_{\beta}$ intensities. Taken from [8]}
+  \label{fig2-3}
+\end{figure}
+
+This effect means that not every variation of the observed spectra is caused solely by stochasticity. In fact, to properly quantify
+the presence of stochasticity, or lack thereof, we must isolate our data from any external effects presented by outside influence
+on the data used.

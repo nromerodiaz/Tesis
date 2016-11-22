@@ -1,0 +1,83 @@
+\documentclass[letterpaper, 11pt]{report}
+\usepackage{graphicx}
+\usepackage{ifpdf}
+\ifpdf
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
+\else
+    %
+\fi
+
+\usepackage{mystyle}
+
+\begin{document}
+
+    %---Title---
+%\input{./tex/title.tex}
+%\maketitle
+
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\huge
+        Observational evidence of star formation stochasticity in the CALIFA dataset\\
+        %First Quarter 2011\\
+        \vskip2cm
+        \Large
+        Nicol\'as Romero D\'iaz\\
+        201127499\\
+        %\vskip4cm
+        Advisor: Jaime Forero-Romero
+    }
+    \vfill
+    \vfill
+    \vfill
+    \includegraphics[width=3cm]{andes.png} % also works with logo.pdf
+
+\end{titlepage}
+
+    %---Abstract---
+%\input{./tex/abstract.tex}
+
+    %---Table of contents---
+\tableofcontents
+
+    %---List of figures---
+%\listoffigures
+
+    %---List of tables---
+%\listoftables
+
+    %---Introduction---
+\input{./tex/introduction.tex}
+
+    %---Theoretical framework---
+  \input{./tex/theoretical-framework.tex}
+
+    %---CALIFA survey---
+\input{./tex/califa-survey.tex}
+
+    %---CALIFA dataset---
+\input{./tex/califa-dataset.tex}
+
+    %---Results---
+\input{./tex/results.tex}
+
+    %---Discussion---
+\input{./tex/discussion.tex}
+
+    %---Conclusion---
+%\input{./tex/conclusion.tex}
+\input{./tex/conc.tex}
+
+    %---Appendix---
+\input{./tex/appendix.tex}
+
+%\apendix
+%\input{./tex/myappendix}
+
+% Bibliography:
+%\clearpage
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\input{./tex/mybibliography.tex}
+
+\end{document}
